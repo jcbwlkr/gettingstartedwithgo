@@ -72,6 +72,10 @@ No more bike-shedding over style.
 
 Tabs vs Spaces? Non-issue.
 
+* Multiple return values
+
+.play multi-returns.go
+
 * How To Get Started
 - Take the tour: https://tour.golang.org
 - How to Write Go Code https://golang.org/doc/code.html
