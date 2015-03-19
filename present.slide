@@ -62,16 +62,27 @@ Found Go and felt at home.
 - Only double quotes for strings. Single quotes for runes.
 - Implicit types through short assignment `:=`
 
-* Hello World
-
-.play hello.go
-
 * gofmt
 Core tool that enforces consistent coding style.
 
 No more bike-shedding over style.
 
 Tabs vs Spaces? Non-issue.
+
+* Hello World
+
+.play hello.go
+
+* Fetch remote packages
+Use `go`get`
+
+  go get github.com/russross/blackfriday
+
+Or add import statement then run `go`get` without arguments.
+
+* Fetch remote packages
+
+.play markdown.go
 
 * Testing
 Built in testing and benchmarking tools
