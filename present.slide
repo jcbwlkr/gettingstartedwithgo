@@ -1,5 +1,5 @@
 Getting Started with Go
-A Helpful Introduction
+An Introduction
 20 Mar 2015
 
 Jacob Walker
@@ -12,23 +12,35 @@ http://jacob-walker.com
 
 .caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
 
+* Go
+Originally developed at Google by Ken Thompson, Rob Pike, and Robert Griesemer.
+
+Relatively young: started in 2007 and announced in 2009.
+
+Compiled, Statically Typed, Concurrent, Imperative language.
+
+Originally developed in response to pain points in C or C++, Go has become very
+popular among developers coming from dynamic general purpose languages.
+
 * Overview
 - What makes the language great
 - How to get started
 - How to be successful
 
 * Strengths
+
+* Summary
 - Simplicity
 - Tooling
 - Community
 - Concurrency
 
 * Compiled
-- Compiles FAST
-- Easy to use
+- Compiles fast. Feels like a scripted language.
+- Easy to compile
   go build
 - Easy to cross compile
-  GOOS=linux GOOS=amd64 go build
+  GOOS=linux GOARCH=amd64 go build
 - Single statically linked binary. Build, copy, run.
 
 
@@ -39,7 +51,9 @@ http://jacob-walker.com
 * How to Be Successful
 - Effective Go https://golang.org/doc/effective_go.html
 - Code Review Comments https://github.com/golang/go/wiki/CodeReviewComments
-- gofmt
+- gofmt (or goimports) on save
+- golint
+- go vet
 - Read the spec
 - Read the source
 - Read the FAQ
@@ -47,3 +61,5 @@ http://jacob-walker.com
 * Other Links
 - https://github.com/avelino/awesome-go
 - https://gobyexample.com/
+- golang weekly
+- Gopher Slack
