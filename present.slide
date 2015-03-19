@@ -73,6 +73,28 @@ No more bike-shedding over style.
 
 Tabs vs Spaces? Non-issue.
 
+* Testing
+Built in testing and benchmarking tools
+
+  $ go test
+  PASS
+  ok  	fmt	0.025s
+
+  $ go test -bench=.
+  PASS
+  BenchmarkSprintfEmpty	20000000	        76.3 ns/op
+  BenchmarkSprintfString	 5000000	       249 ns/op
+  BenchmarkSprintfInt	 5000000	       231 ns/op
+  BenchmarkSprintfIntInt	 5000000	       374 ns/op
+  BenchmarkSprintfPrefixedInt	 3000000	       469 ns/op
+  BenchmarkSprintfFloat	 3000000	       416 ns/op
+  BenchmarkManyArgs	 1000000	      1351 ns/op
+  BenchmarkFprintInt	10000000	       201 ns/op
+  BenchmarkFprintIntNoAlloc	10000000	       132 ns/op
+  BenchmarkScanInts	    2000	    796314 ns/op
+  BenchmarkScanRecursiveInt	    2000	   1070425 ns/op
+  ok  	fmt	19.344s
+
 * Multiple return values
 
 .play multi-returns.go
