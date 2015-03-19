@@ -59,6 +59,7 @@ Found Go and felt at home.
 - Only one looping construct `for` that can handle `for`, `foreach`, `while` styles of looping.
 - Few needs for semicolons. Few need for parens.
 - Mandatory braces. Have to be on same line.
+- Only double quotes for strings. Single quotes for runes.
 - Implicit types through short assignment `:=`
 
 * Hello World
@@ -75,6 +76,28 @@ Tabs vs Spaces? Non-issue.
 * Multiple return values
 
 .play multi-returns.go
+
+* No exceptions
+
+Intentionally omitted. Return and check errors instead.
+
+.play errors.go
+
+* Error Handling
+
+Handling errors can be repetitive but being explicit you know how they are
+handled. You have the full power of the language at your disposal to respond to
+errors.
+
+Use `Must` versions when you know it won't error such as `MustCompile`.
+
+Combine error handling when appropriate.
+
+`panic` only when absolutely necessary
+
+Get creative.
+
+Blog post by Rob Pike: [[https://blog.golang.org/errors-are-values][Errors Are Values]]
 
 * How To Get Started
 - Take the tour: https://tour.golang.org
