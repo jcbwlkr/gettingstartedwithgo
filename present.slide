@@ -1,0 +1,49 @@
+Getting Started with Go
+A Helpful Introduction
+20 Mar 2015
+
+Jacob Walker
+Gopher, Wrecking Ball Media Group
+http://jacob-walker.com
+@jcbwlkr
+
+* Enter The Gopher
+.image gopher.png
+
+.caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
+
+* Overview
+- What makes the language great
+- How to get started
+- How to be successful
+
+* Strengths
+- Simplicity
+- Tooling
+- Community
+- Concurrency
+
+* Compiled
+- Compiles FAST
+- Easy to use
+  go build
+- Easy to cross compile
+  GOOS=linux GOOS=amd64 go build
+- Single statically linked binary. Build, copy, run.
+
+
+* How To Get Started
+- Take the tour: https://tour.golang.org
+- How to Write Go Code https://golang.org/doc/code.html
+
+* How to Be Successful
+- Effective Go https://golang.org/doc/effective_go.html
+- Code Review Comments https://github.com/golang/go/wiki/CodeReviewComments
+- gofmt
+- Read the spec
+- Read the source
+- Read the FAQ
+
+* Other Links
+- https://github.com/avelino/awesome-go
+- https://gobyexample.com/
