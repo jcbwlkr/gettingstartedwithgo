@@ -7,12 +7,18 @@ Gopher, Wrecking Ball Media Group
 http://jacob-walker.com
 @jcbwlkr
 
+* Background
+
+* Me
+The majority of my experience is in PHP. I ventured into Ruby, Python, and
+Node.js. Dabbled with C++.
+
+Found Go and felt at home.
+
 * Enter The Gopher
 .image gopher.png
 
 .caption _Gopher_ by [[http://www.reneefrench.com][Renée French]]
-
-* Background
 
 * Go
 Originally developed at Google by Ken Thompson, Rob Pike, and Robert Griesemer.
@@ -21,26 +27,66 @@ Relatively young: started in 2007 and announced in 2009.
 
 Compiled, Statically Typed, Concurrent, Imperative language.
 
-Originally developed in response to pain points in C or C++, Go has become very
-popular among developers coming from dynamic general purpose languages.
-
-* Me
-The majority of my experience is in PHP. I ventured into Ruby, Python, and
-Node.js.
-
-Found Go and felt at home.
+Originally developed in response to pain points in C and C++, Go has become
+very popular among developers coming from dynamic general purpose languages.
 
 * Overview
-- What I like about Go
+My intended audience is someone who is interested in starting to use Go.
+
 - How to get started
+- Notable Features of Go
 - How to be successful
 
-* What I Like About Go
+* How To Get Started
+
+* Take the tour
+[[https://tour.golang.org][https://tour.golang.org]]
+
+* Install Go
+
+- Recommended: Download from [[https://golang.org/doc/install][golang.org]] and unpack
+  sudo tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz
+  export PATH=$PATH:/usr/local/go/bin # Add to profile
+- Use package manager?
+- Build from source?
+
+* Test Installation
+
+.code hello.go
+
+  $ go run hello.go
+  Hello, World
+
+* How to Write Go Code
+[[https://golang.org/doc/code.html][https://golang.org/doc/code.html]]
+
+* Set GOPATH
+
+  export GOPATH=$HOME/go # Add to profile
+  export PATH=$PATH:$GOPATH/bin # Add to profile
+
+  $HOME/go
+  ├── bin
+  ├── pkg
+  └── src
+      ├── bitbucket.com
+      │   └── jcbwlkr
+      │       └── hello
+      └── github.com
+          ├── hitjim
+          │   └── coollib
+          └── jcbwlkr
+              ├── coolapp
+              └── logger
+
+  12 directories, 0 files
+
+
+* Notable Features
 
 * Summary
 - Simplicity
 - Tooling
-- Community
 - Concurrency
 
 * Compiled
@@ -74,8 +120,6 @@ Tabs vs Spaces? Non-issue.
 .play hello.go
 
 * Fetch remote packages
-Use `go`get`
-
   go get github.com/russross/blackfriday
 
 Or add import statement then run `go`get` without arguments.
@@ -84,27 +128,6 @@ Or add import statement then run `go`get` without arguments.
 
 .play markdown.go
 
-* Testing
-Built in testing and benchmarking tools
-
-  $ go test
-  PASS
-  ok  	fmt	0.025s
-
-  $ go test -bench=.
-  PASS
-  BenchmarkSprintfEmpty	20000000	        76.3 ns/op
-  BenchmarkSprintfString	 5000000	       249 ns/op
-  BenchmarkSprintfInt	 5000000	       231 ns/op
-  BenchmarkSprintfIntInt	 5000000	       374 ns/op
-  BenchmarkSprintfPrefixedInt	 3000000	       469 ns/op
-  BenchmarkSprintfFloat	 3000000	       416 ns/op
-  BenchmarkManyArgs	 1000000	      1351 ns/op
-  BenchmarkFprintInt	10000000	       201 ns/op
-  BenchmarkFprintIntNoAlloc	10000000	       132 ns/op
-  BenchmarkScanInts	    2000	    796314 ns/op
-  BenchmarkScanRecursiveInt	    2000	   1070425 ns/op
-  ok  	fmt	19.344s
 
 * Multiple return values
 
@@ -132,11 +155,9 @@ Get creative.
 
 Blog post by Rob Pike: [[https://blog.golang.org/errors-are-values][Errors Are Values]]
 
-* How To Get Started
-- Take the tour: https://tour.golang.org
-- How to Write Go Code https://golang.org/doc/code.html
 
 * How to Be Successful
+- Community
 - Effective Go https://golang.org/doc/effective_go.html
 - Code Review Comments https://github.com/golang/go/wiki/CodeReviewComments
 - gofmt (or goimports) on save
