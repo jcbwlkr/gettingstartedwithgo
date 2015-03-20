@@ -1,5 +1,5 @@
 Getting Started with Go
-An Unofficial Introduction
+An Introduction
 20 Mar 2015
 
 Jacob Walker
@@ -49,7 +49,7 @@ My intended audience is someone who is interested in starting to use Go.
 
 - Recommended: Download from [[https://golang.org/doc/install][golang.org]] and unpack
   sudo tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz
-  export PATH=$PATH:/usr/local/go/bin # Add to profile
+  export PATH=$PATH:/usr/local/go/bin                  # Add to profile
 - Use package manager?
 - Build from source?
 
@@ -65,8 +65,8 @@ My intended audience is someone who is interested in starting to use Go.
 
 * Set GOPATH
 
-  export GOPATH=$HOME/go # Add to profile
-  export PATH=$PATH:$GOPATH/bin # Add to profile
+  export GOPATH=$HOME/go         # Add to profile
+  export PATH=$PATH:$GOPATH/bin  # Add to profile
 
   $HOME/go
   ├── bin
@@ -132,6 +132,15 @@ Single statically linked binary. Build, copy, run, profit!
   PASS
   ok      github.com/jcbwlkr/strings      0.004s
 
+* Fetch remote packages
+  go get github.com/russross/blackfriday
+
+Or add import statement then run `go`get` without arguments.
+
+* Fetch remote packages
+
+.play markdown.go
+
 * Notable Features
 
 * Summary
@@ -145,8 +154,8 @@ Single statically linked binary. Build, copy, run, profit!
 - Only one looping construct `for` that can handle `for`, `foreach`, `while` styles of looping.
 - Few needs for semicolons. Few need for parens.
 - Mandatory braces. Have to be on same line.
-- Only double quotes for strings. Single quotes for runes.
-- Implicit types through short assignment `:=`
+- Double quotes for strings. Single quotes for single runes.
+- Consistent, Predictable, Orthoganal
 
 * gofmt
 Core tool that enforces consistent coding style.
@@ -155,19 +164,13 @@ No more bike-shedding over style.
 
 Tabs vs Spaces? Non-issue.
 
-* Hello World
+* Expansive standard library
+[[http://golang.org/pkg/][http://golang.org/pkg/]]
 
-.play hello.go
-
-* Fetch remote packages
-  go get github.com/russross/blackfriday
-
-Or add import statement then run `go`get` without arguments.
-
-* Fetch remote packages
-
-.play markdown.go
-
+- `net/http`: Build web servers and clients
+- `text/template`, `html/template`: Templating tools
+- `sync`: Tools supporting concurrency
+- `encoding/json`: JSON Marshalling and Unmarshalling
 
 * Multiple return values
 
@@ -191,26 +194,71 @@ Combine error handling when appropriate.
 
 `panic` only when absolutely necessary
 
-Get creative.
+Don't ignore errors!
 
 Blog post by Rob Pike: [[https://blog.golang.org/errors-are-values][Errors Are Values]]
 
+* Concurrency With "go"
+
+.play concurrency.go
+
+* Concurrency Continued
+
+- Channels: Typed conduits for communicating between goroutines. Use for
+  message passing and synchronization.
+- Package `sync` provides Mutexes, WaitGroups and other synchronization tools.
+
+* More
+- Statically Typed
+- Garbage collected
+- OOP Composition over Inheritance (No direct inheritance)
+- Implicit interfaces
+- UTF-8 Support
+- No generics
 
 * How to Be Successful
-- Community
-- Effective Go https://golang.org/doc/effective_go.html
-- Code Review Comments https://github.com/golang/go/wiki/CodeReviewComments
-- gofmt (or goimports) on save
-- golint
-- go vet
-- Read the spec
-- Read the source
-- Read the FAQ
+
+* Read!
+- [[https://golang.org/doc/effective_go.html][Effective Go ]]
+- [[https://github.com/golang/go/wiki/CodeReviewComments][Code Review Comments]]
+- [[https://golang.org/ref/spec][The spec]]
+- [[https://golang.org/doc/faq][The FAQ]]
+- [[https://blog.golang.org/index][The Go Blog]]
+- Read the standard library source
+
+* Use the tools
+- `gofmt` (or `goimports`) on save
+- `golint` look for style errors
+- `go`vet` look for suspicious / dangerous code
+- `godoc` browse Go Doc of all locally installed packages
+
+* Editor Love
+Editor Plugins
+
+- [[https://github.com/fatih/vim-go][Vim-Go]]
+- [[https://github.com/dominikh/go-mode.el][Emacs go-mode]]
+- [[https://atom.io/packages/go-plus][Atom.io go-plus]]
+- [[https://github.com/DisposaBoy/GoSublime][GoSublime]]
+
+IDE
+
+- [[https://github.com/visualfc/liteide][LiteIDE]]
+
+* Misc & Best Practices
+- Write Idiomatic Go. Don't try to write Python/Ruby/Java.
+- Vendor your dependencies
+- Use channels to communicate between goroutines.
+  Do not communicate by sharing memory; instead, share memory by communicating.
+- Go, not Golang
+
+* Community
+- [[http://bit.ly/go-slack-signup][Gopher Slack]]
+- `#go-nuts` on `irc.freenode.net`
+- [[http://exercism.io/][Exercism.io]] Go exercises with community sourced feedback
 
 * Other Resources
-- https://github.com/avelino/awesome-go
-- https://gobyexample.com/
-- golang weekly
-- Gopher Slack
-
-* Credits
+- [[https://github.com/avelino/awesome-go][Awesome Go]] (curated list of great community packages)
+- [[https://gobyexample.com/][Go By Example]] Go tutorials
+- [[http://golangweekly.com/][Golang weekly]] free weekly newsletter
+- [[http://golang-challenge.com/][Monthly Go Challenge]]
+- RSS Feed of StackOverflow questions tagged `go`
