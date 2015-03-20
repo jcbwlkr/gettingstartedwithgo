@@ -10,10 +10,13 @@ http://jacob-walker.com
 * Background
 
 * Me
+
 The majority of my experience is in PHP. I ventured into Ruby, Python, and
 Node.js. Dabbled with C++.
 
 Found Go and felt at home.
+
+I'm not affiliated with Google, just a passionate ʕ◔ϖ◔ʔ
 
 * Enter The Gopher
 .image gopher.png
@@ -81,6 +84,53 @@ My intended audience is someone who is interested in starting to use Go.
 
   12 directories, 0 files
 
+* Our First App
+
+Put hello world in `$GOPATH/src/bitbucket.com/jcbwlkr/hello/main.go`
+
+.code hello.go
+
+* Build it!
+  $ pwd
+  ~/go/src/bitbucket.com/jcbwlkr/hello
+  $ go build
+  $ ./hello
+  Hello, World
+
+Take a look
+
+  $ ls -lh
+  total 1.8M
+  -rwxr-xr-x 1 jwalker jwalker 1.8M Mar 20 11:04 hello*
+  -rw-rw-r-- 1 jwalker jwalker   73 Mar 20 11:04 main.go
+
+Single statically linked binary. Build, copy, run, profit!
+
+* Compilation
+- Compiles fast (really fast).
+- Easy to compile
+  go build
+- Easy to cross compile
+  GOOS=linux GOARCH=amd64 go build
+- Feels like a scripted language.
+  go run hello.go
+- Can compile Go code that calls C code with `cgo`
+
+* Our First Library
+
+`$GOPATH/src/github.com/jcbwlkr/strings/strings.go`
+
+.code strings.go
+
+* Our First Test
+
+`$GOPATH/src/github.com/jcbwlkr/strings/strings_test.go`
+
+.code strings_test.go
+
+  $ go test
+  PASS
+  ok      github.com/jcbwlkr/strings      0.004s
 
 * Notable Features
 
@@ -88,16 +138,6 @@ My intended audience is someone who is interested in starting to use Go.
 - Simplicity
 - Tooling
 - Concurrency
-
-* Compiled
-- Compiles fast.
-- Easy to compile
-  go build
-- Easy to cross compile
-  GOOS=linux GOARCH=amd64 go build
-- Feels like a scripted language.
-  go run hello.go
-- Single statically linked binary. Build, copy, run.
 
 * Simple syntax
 - Only 25 keywords.
