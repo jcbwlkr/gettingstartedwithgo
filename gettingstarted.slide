@@ -1,6 +1,6 @@
 Getting Started with Go
 An Introduction
-20 Mar 2015
+21 Mar 2015
 
 Jacob Walker
 Gopher, Wrecking Ball Media Group
@@ -36,6 +36,8 @@ very popular among developers coming from dynamic general purpose languages.
 * Overview
 My intended audience is someone who is interested in starting to use Go.
 
+Any other gophers here?
+
 - How to get started
 - Notable Features of Go
 - How to be successful
@@ -63,7 +65,7 @@ My intended audience is someone who is interested in starting to use Go.
 * How to Write Go Code
 [[https://golang.org/doc/code.html][https://golang.org/doc/code.html]]
 
-* Set GOPATH
+* Configue Workspace
 
   export GOPATH=$HOME/go         # Add to profile
   export PATH=$PATH:$GOPATH/bin  # Add to profile
@@ -128,16 +130,20 @@ Single statically linked binary. Build, copy, run, profit!
 
 .code strings_test.go
 
+* Testing Continued
   $ go test
   PASS
   ok      github.com/jcbwlkr/strings      0.004s
 
+More options
+
+  $ go test -bench=.
+  $ go test -race
+  $ go test -cover
+
 * Fetch remote packages
+
   go get github.com/russross/blackfriday
-
-Or add import statement then run `go`get` without arguments.
-
-* Fetch remote packages
 
 .play markdown.go
 
@@ -184,6 +190,8 @@ Intentionally omitted. Return and check errors instead.
 
 * Error Handling
 
+Don't ignore errors!
+
 Handling errors can be repetitive but being explicit you know how they are
 handled. You have the full power of the language at your disposal to respond to
 errors.
@@ -194,26 +202,27 @@ Combine error handling when appropriate.
 
 `panic` only when absolutely necessary
 
-Don't ignore errors!
-
 Blog post by Rob Pike: [[https://blog.golang.org/errors-are-values][Errors Are Values]]
 
 * Concurrency With "go"
 
 .play concurrency.go
 
+* Synchronized Concurrency
+
+.play concurrency-waitgroups.go
+
 * Concurrency Continued
 
-- Channels: Typed conduits for communicating between goroutines. Use for
-  message passing and synchronization.
+- Channels: Typed conduits for communicating between goroutines. Use for message passing and synchronization.
 - Package `sync` provides Mutexes, WaitGroups and other synchronization tools.
 
-* More
+* More Notable Features
 - Statically Typed
-- Garbage collected
+- Automatic garbage collection
 - OOP Composition over Inheritance (No direct inheritance)
 - Implicit interfaces
-- UTF-8 Support
+- First class unicode Support
 - No generics
 
 * How to Be Successful
@@ -255,10 +264,10 @@ IDE
 - [[http://bit.ly/go-slack-signup][Gopher Slack]]
 - `#go-nuts` on `irc.freenode.net`
 - [[http://exercism.io/][Exercism.io]] Go exercises with community sourced feedback
+- [[http://golang-challenge.com/][Monthly Go Challenge]]
 
 * Other Resources
 - [[https://github.com/avelino/awesome-go][Awesome Go]] (curated list of great community packages)
 - [[https://gobyexample.com/][Go By Example]] Go tutorials
 - [[http://golangweekly.com/][Golang weekly]] free weekly newsletter
-- [[http://golang-challenge.com/][Monthly Go Challenge]]
 - RSS Feed of StackOverflow questions tagged `go`

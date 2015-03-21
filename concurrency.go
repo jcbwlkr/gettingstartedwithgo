@@ -6,8 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Concurrency!")
-
 	go printEvery("In goroutine", 500*time.Millisecond)
 	printEvery("In main", 250*time.Millisecond)
 }

@@ -9,7 +9,7 @@ import (
 func main() {
 	input := "The rain in Spain falls mainly on the plains"
 
-	re, err := regexp.Compile("[rm[ain")
+	re, err := regexp.Compile("[rm[ain") // HL
 	if err != nil {
 		log.Fatalln(err)
 	}
