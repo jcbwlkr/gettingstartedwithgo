@@ -65,7 +65,7 @@ Any other gophers here?
 * How to Write Go Code
 [[https://golang.org/doc/code.html][https://golang.org/doc/code.html]]
 
-* Configue Workspace
+* Configure Workspace
 
   export GOPATH=$HOME/go         # Add to profile
   export PATH=$PATH:$GOPATH/bin  # Add to profile
@@ -123,6 +123,8 @@ Single statically linked binary. Build, copy, run, profit!
 `$GOPATH/src/github.com/jcbwlkr/strings/strings.go`
 
 .code strings.go
+
+.caption _Code_from_ [[http://stackoverflow.com/questions/1752414/how-to-reverse-a-string-in-go][Stack Overflow]]
 
 * Our First Test
 
