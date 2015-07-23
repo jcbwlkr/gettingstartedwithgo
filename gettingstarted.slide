@@ -1,6 +1,6 @@
 Getting Started with Go
 An Introduction
-21 Mar 2015
+23 Jul 2015
 
 Jacob Walker
 Gopher, Wrecking Ball Media Group
@@ -242,6 +242,7 @@ Blog post by Rob Pike: [[https://blog.golang.org/errors-are-values][Errors Are V
 - `golint` look for style errors
 - `go`vet` look for suspicious / dangerous code
 - `godoc` browse Go Doc of all locally installed packages
+- [[https://github.com/alecthomas/gometalinter][gometalinter]]
 
 * Editor Love
 Editor Plugins
@@ -256,11 +257,15 @@ IDE
 - [[https://github.com/visualfc/liteide][LiteIDE]]
 
 * Misc & Best Practices
-- Write Idiomatic Go. Don't try to write Python/Ruby/Java.
 - Vendor your dependencies
 - Use channels to communicate between goroutines.
   Do not communicate by sharing memory; instead, share memory by communicating.
-- Go, not Golang
+- Go or The Go Programming Language, not Golang
+- Write Idiomatic Go. Don't try to write Python/Ruby/Java.
+
+* Misc & Best Practices
+.image meme.jpg
+
 
 * Community
 - [[http://bit.ly/go-slack-signup][Gopher Slack]]

@@ -12,7 +12,7 @@ func main() {
 
 func printEvery(s string, d time.Duration) {
 	for i := 0; i < 10; i++ {
-		fmt.Println(s)
+		fmt.Println(i, s)
 		time.Sleep(d)
 	}
 }
