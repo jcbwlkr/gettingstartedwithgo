@@ -1,5 +1,5 @@
 Getting Started with Go
-A Quick Introduction
+An Introductory Workshop
 4 May 2016
 
 Jacob Walker
@@ -65,7 +65,7 @@ Kind of
 - Few needs for semicolons. Few need for parens.
 - Mandatory braces. Have to be on same line.
 - Double quotes for strings. Single quotes for single runes.
-- Consistent, Predictable, Orthoganal
+- Consistent, Predictable, Orthogonal
 
 * Tooling
 
@@ -133,6 +133,7 @@ Tabs vs Spaces? Non-issue.
 * Community
 - `#go` channel on devICT / WWC Slack
 - [[http://invite.slack.golangbridge.org/][Gopher Slack]]
+- [[http://www.womenwhogo.org/][Women Who Go]]
 - [[http://exercism.io/][Exercism.io]] Go exercises with community sourced feedback
 - [[http://golang-challenge.com/][Monthly Go Challenge]]
 - Open Wichita Infant Info project
